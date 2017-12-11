@@ -1,0 +1,36 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!DOCTYPE html>
+<html>
+    <body>
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<address>
+    The Johnson Way<br />
+    Columbia, MO 65201<br />
+    <abbr title="Phone">P:</abbr>
+    314.660.5780
+</address>
+
+<address>
+    <strong>Email:</strong> <a href="mailto:Support@example.com">zj5ff@mail.missouri.edu</a><br />
+    <strong>Instagram Handle:</strong> <a href="http://www.instagram.com/zigggyzan"> zigggyzan</a>
+</address>
+
+    <form id="form1" runat="server" action="mailto:zj5ff@mail.missouri.edu">
+		<asp:Button id="button1" runat="server" Text="Click me!" OnClick="button1Clicked" />
+        Name:<br><input type="text" name="name"><br>
+        Email:<br> <input type="text" name="email">
+        <br>
+        What's up?
+        <br> <textarea rows="4" cols="50">
+        Tell me what's on your mind...</textarea><br>
+        <input type="submit" value="Submit">
+	</form>
+    </body>
+</html>
